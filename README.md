@@ -1,2 +1,5 @@
-# xinxiangshicheng_wearbili_player
-小电视播放器1.5，一个支持wearbili的老牌开源手表播放器,使用mediaplayer,作者心想事成
+# 小电视播放器(xinxiangshicheng_wearbili_player)
+小电视播放器，一个支持wearbili的老牌开源手表播放器,使用mediaplayer,作者心想事成
+欢迎使用小电视播放器，这里是小电视的开源代码，你可以自行下载代码进行修改只需遵循GPL3.0协议即可
+
+#如何下载小电视播放器安装包
