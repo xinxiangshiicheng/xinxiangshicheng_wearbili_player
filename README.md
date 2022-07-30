@@ -1,0 +1,2 @@
+# xinxiangshicheng_wearbili_player
+小电视播放器1.5，一个支持wearbili的老牌开源手表播放器,使用mediaplayer,作者心想事成
