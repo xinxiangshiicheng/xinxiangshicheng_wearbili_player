@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xinxiangshicheng.wearbiliplayer.cn">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Wearplayer">
+        <activity
+            android:name=".SupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WearOsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".game.GuessCupActivity"
+            android:exported="false" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.ads.AD_MANAGER_APP" -->
+        <!-- android:value="true" /> -->
+        <activity
+            android:name=".ReceiveActivity"
+            android:exported="true">
+
+            <!-- 要想在别的App上能成功调起App，必须添加intent过滤器 -->
+            <intent-filter>
+
+                <!-- 协议部分，随便设置 -->
+                <data
+                    android:host="receive"
+                    android:path="/play"
+                    android:port="8080"
+                    android:scheme="wearbiliplayer" />
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.VideoSetting"
+            android:exported="false" />
+        <activity
+            android:name=".about.DanmukeSetting"
+            android:exported="false" />
+        <activity
+            android:name=".game.DinosaurActivity"
+            android:exported="false" />
+        <activity
+            android:name=".about.OpenSourceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".about.InformationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".game.GamelistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".player.PlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
